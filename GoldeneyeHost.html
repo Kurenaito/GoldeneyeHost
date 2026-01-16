@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const code = params.get('code');
+        if (code) {
+            // Redirect to app with custom URL scheme
+            window.location.href = `goldeneye://oauth/callback?code=${code}`;
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting to Goldeneye app...</p>
+</body>
+</html>
